@@ -1,30 +1,15 @@
 <template>
   <div class="bg-white shadow-md rounded-md h-24 p-5">
     <article class="p-4 flex space-x-4">
-      <app-icon
-        name="profile"
-        size="l"
+      <inline-svg
+        :src="require('../assets/icons/home.svg')"
+        aria-label="My image"
       />
-      <!--      <button @click="showMusic = !showMusic">Toggle Music Icon</button>-->
       <div class="min-w-0 relative flex-auto sm:pr-20 lg:pr-0 xl:pr-20">
         <h2 class="text-lg font-semibold text-black mb-0.5">
           Status
         </h2>
         <dl class="flex flex-wrap text-sm font-medium whitespace-pre">
-          <div>
-            <dt class="sr-only">Time</dt>
-            <dd>
-              <abbr :title="`20 minutes`">20m</abbr>
-            </dd>
-          </div>
-          <div>
-            <dt class="sr-only">Difficulty</dt>
-            <dd> · Easy</dd>
-          </div>
-          <div>
-            <dt class="sr-only">Servings</dt>
-            <dd> · 4 servings</dd>
-          </div>
           <div class="flex-none w-full mt-0.5 font-normal">
             <dt class="inline">By</dt>
             <dd class="inline text-black">Arpit Patidar</dd>
@@ -57,19 +42,3 @@
     <!--    </div>-->
   </div>
 </template>
-
-<script>
-import AppIcon from '~/components/AppIcon'
-
-export default {
-  name: 'App',
-  components: {
-    AppIcon
-  },
-  data () {
-    return {
-      showMusic: false
-    }
-  }
-}
-</script>
