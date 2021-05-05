@@ -1,0 +1,27 @@
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* Fonts */
+.font-cairo {
+  font-family: 'Cairo', sans-serif;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: #EFF6FF;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background: #D1D5DB;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}

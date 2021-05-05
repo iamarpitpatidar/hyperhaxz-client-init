@@ -3,6 +3,7 @@
 .cache
 .idea
 src/.temp
+src/components/icons
 node_modules
 archive
 dist

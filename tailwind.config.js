@@ -5,5 +5,12 @@ module.exports = {
   purge: [
     './src/**/*.html',
     './src/**/*.vue'
-  ]
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Cairo', ...defaultTheme.fontFamily.sans]
+      }
+    }
+  }
 }
