@@ -28,12 +28,6 @@
                   scope="col"
                   class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                 >
-                  Plan
-                </th>
-                <th
-                  scope="col"
-                  class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                >
                   Created By
                 </th>
                 <th
@@ -46,25 +40,20 @@
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
               <tr
-                v-for="subscription in subscriptions"
-                :key="subscription.code"
+                v-for="invite in invites"
+                :key="invite.code"
               >
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                  {{ subscription._id }}
+                  {{ invite._id }}
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                  {{ subscription.code }}
+                  {{ invite.code }}
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                  {{ subscription.expiry }}
+                  {{ invite.expiry }}
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                  <span :class="['px-2', 'inline-flex', 'text-xs', 'leading-5', 'font-semibold', 'rounded-full', isActive(subscription) ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800']">
-                    {{ subscription.plan }}
-                  </span>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                  {{ subscription.creator }}
+                  {{ invite.creator }}
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <a
@@ -88,7 +77,7 @@
 import Delete from '~/assets/icons/trash.svg'
 import Pagination from '~/components/Pagination'
 
-const subscriptions = [
+const invites = [
   {
     _id: 1,
     code: 'SylWt-uYUpM-iBtwX-wwqJo-bza5S',
@@ -107,14 +96,14 @@ const subscriptions = [
     _id: 3,
     code: 'pyq75-EcLI4-0iHi8-9t7hN-O52z2',
     expiry: '12 Dec 2022',
-    creator: 'someguy123',
+    creator: 'schlumped',
     plan: 'Free'
   },
   {
     _id: 4,
     code: 'Yr12X-LdrtS-rmj6M-8klCr-uKwKK',
     expiry: '15 Aug 2024',
-    creator: 'schlumped',
+    creator: 'someguy123',
     plan: 'Plus'
   },
   {
@@ -132,16 +121,11 @@ export default {
     Pagination
   },
   metaInfo: {
-    title: 'Subscription'
+    title: 'Invites'
   },
   data () {
     return {
-      subscriptions
-    }
-  },
-  methods: {
-    isActive (subscription) {
-      return subscription.plan === 'Pro' || subscription.plan === 'Plus'
+      invites
     }
   }
 }

@@ -4,23 +4,23 @@
       <home-icon class="h-5 w-5" />
       <span class="mx-4 font-medium">Home</span>
     </nav-link>
-    <nav-link to="/dashboard/users">
+    <nav-link to="/dashboard/users/">
       <users-icon class="h-5 w-5" />
       <span class="mx-4 font-medium">Users</span>
     </nav-link>
-    <nav-link to="/dashboard/invites">
+    <nav-link to="/dashboard/invites/">
       <invite-icon class="h-5 w-5" />
       <span class="mx-4 font-medium">Invite Codes</span>
     </nav-link>
-    <nav-link to="/dashboard/subscriptions">
+    <nav-link to="/dashboard/subscriptions/">
       <subscription-icon class="h-5 w-5" />
       <span class="mx-4 font-medium">Subscriptions</span>
     </nav-link>
-    <nav-link to="/dashboard/fraud">
+    <nav-link to="/dashboard/fraud/">
       <fraud-icon class="h-5 w-5" />
       <span class="mx-4 font-medium">Fraud</span>
     </nav-link>
-    <nav-link to="/dashboard/sellers">
+    <nav-link to="/dashboard/sellers/">
       <sellers-icon class="h-5 w-5" />
       <span class="mx-4 font-medium">Sellers</span>
     </nav-link>
