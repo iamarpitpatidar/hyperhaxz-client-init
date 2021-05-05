@@ -24,6 +24,9 @@ import Stats from '~/components/Stats'
 import StatItem from '~/components/StatItem'
 
 export default {
+  metaInfo: {
+    title: 'Fraud'
+  },
   components: {
     Stats,
     StatItem

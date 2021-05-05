@@ -182,7 +182,7 @@ export default {
     Pagination
   },
   metaInfo: {
-    title: 'Sellers'
+    title: 'Users'
   },
   data () {
     return {
