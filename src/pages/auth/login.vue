@@ -69,3 +69,11 @@
     </div>
   </Layout>
 </template>
+
+<script>
+export default {
+  metaInfo: {
+    title: 'Login'
+  }
+}
+</script>
