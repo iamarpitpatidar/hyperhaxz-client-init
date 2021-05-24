@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "gridsome": "^0.7.23",
-    "vue-inline-svg": "^2.0.0",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
@@ -24,7 +23,6 @@
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^7.9.0",
     "gridsome-plugin-tailwindcss": "^4.1.1",
-    "miragejs": "^0.1.41",
     "postcss": "^7",
     "snazzy": "^9.0.0",
     "standard": "^16.0.3",
