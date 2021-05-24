@@ -6,10 +6,10 @@
           <g-link to="/">HyperHaxZ</g-link>
         </div>
         <div>
-          <button class="mx-2">
+          <button class="py-1 px-3 m-1 rounded-md hover:bg-gray-200">
             <g-link to="/auth/login">Login</g-link>
           </button>
-          <button class="py-1 px-3 m-2 rounded-md bg-white">
+          <button class="py-1 px-3 m-1 rounded-md bg-white hover:bg-gray-100">
             <g-link to="/auth/register">Register</g-link>
           </button>
         </div>
