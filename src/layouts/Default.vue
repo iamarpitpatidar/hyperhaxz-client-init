@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-gray-100">
+  <main class="bg-gray-300 h-screen">
     <Header />
     <slot />
     <Footer />
-  </div>
+  </main>
 </template>
 
 <script>
