@@ -3,11 +3,13 @@ import DefaultLayout from '~/layouts/Default'
 import Dashboard from '~/layouts/Dashboard'
 
 import Vuex from 'vuex'
+import Vuelidate from 'vuelidate'
 import { actions, getters, initiateState, mutations } from './store'
-import { menu } from './store/modules'
+import { menu, account } from './store/modules'
 
 export default function (Vue, { router, appOptions }) {
   Vue.use(Vuex)
+  Vue.use(Vuelidate)
 
   Vue.component('Layout', DefaultLayout)
   Vue.component('Dashboard', Dashboard)
@@ -28,6 +30,7 @@ export default function (Vue, { router, appOptions }) {
     actions: actions,
     getters: getters,
     modules: {
+      account,
       menu
     }
   })

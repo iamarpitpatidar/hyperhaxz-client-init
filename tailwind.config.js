@@ -8,6 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        red: {
+          500: '#ff4431'
+        }
+      },
       fontFamily: {
         sans: ['Cairo', ...defaultTheme.fontFamily.sans]
       }

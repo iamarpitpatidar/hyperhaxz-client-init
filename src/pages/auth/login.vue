@@ -8,35 +8,58 @@
           </h2>
         </div>
         <div class="bg-white rounded-md p-10 mt-8">
-          <form>
+          <form
+            novalidate
+            @submit.prevent="loginHandler"
+          >
             <div class="rounded-md shadow-sm mb-8">
               <div class="mb-2">
                 <label
                   for="username"
                   class="text-gray-700"
                 >Username</label>
-                <input
-                  id="username"
-                  name="username"
-                  type="text"
-                  autocomplete="username"
-                  required
-                  class="appearance-none rounded-md w-full px-3 py-2 border-2 border-gray-300 text-gray-700 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                >
+                <div class="rounded-md bg-red-500">
+                  <input
+                    id="username"
+                    v-model.trim="$v.user.username.$model"
+                    name="username"
+                    type="text"
+                    required
+                    autocomplete="username"
+                    :class="[$v.user.username.$error ? 'border-red-500' : 'border-gray-300 focus:ring-indigo-500 focus:border-indigo-500' ,'appearance-none rounded-md w-full px-3 py-2 border-2 text-gray-700 focus:outline-none sm:text-sm']"
+                    @blur="$v.user.username.$touch()"
+                  >
+                  <div
+                    v-if="$v.user.username.$error"
+                    class="px-3 py-1 text-white bg-red-500 rounded"
+                  >
+                    Please enter your username
+                  </div>
+                </div>
               </div>
               <div class="mb-2">
                 <label
                   for="password"
                   class="text-gray-700"
                 >Password</label>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  autocomplete="current-password"
-                  required
-                  class="appearance-none rounded-md w-full px-3 py-2 border-2 border-gray-300 text-gray-700 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                >
+                <div class="rounded-md bg-red-500">
+                  <input
+                    id="password"
+                    v-model.trim="$v.user.password.$model"
+                    name="password"
+                    type="password"
+                    autocomplete="current-password"
+                    required
+                    :class="[$v.user.password.$error ? 'border-red-500' : 'border-gray-300 focus:ring-indigo-500 focus:border-indigo-500' ,'appearance-none rounded-md w-full px-3 py-2 border-2 text-gray-700 focus:outline-none sm:text-sm']"
+                    @blur="$v.user.password.$touch()"
+                  >
+                  <div
+                    v-if="$v.user.password.$error"
+                    class="px-3 py-1 text-white bg-red-500 rounded"
+                  >
+                    Please enter your password
+                  </div>
+                </div>
               </div>
             </div>
             <div>
@@ -58,6 +81,7 @@
 </template>
 
 <script>
+import { required } from 'vuelidate/lib/validators'
 import Lock from '~/assets/icons/lock.svg'
 
 export default {
@@ -66,6 +90,32 @@ export default {
   },
   metaInfo: {
     title: 'Login'
+  },
+  data () {
+    return {
+      user: {
+        username: '',
+        password: ''
+      }
+    }
+  },
+  validations: {
+    user: {
+      username: {
+        required
+      },
+      password: {
+        required
+      }
+    }
+  },
+  methods: {
+    loginHandler () {
+      this.$v.user.$touch()
+      if (!this.$v.user.$invalid) {
+        console.log('form is valid')
+      }
+    }
   }
 }
 </script>
