@@ -10,7 +10,7 @@ module.exports = {
     },
     touchicon: './src/apple-touch-icon.png'
   },
-  chainWebpack (config, { isServer }) {
+  chainWebpack (config) {
     config.module.rules.delete('svg')
     config.module.rule('svg')
       .test(/\.svg$/)
