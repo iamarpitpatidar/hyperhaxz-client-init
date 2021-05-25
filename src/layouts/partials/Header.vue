@@ -13,7 +13,7 @@
         <div>
           <g-link
             to="/auth/login"
-            class="p-0.5 px-3 m-1 rounded-md hover:bg-gray-200 focus:outline-none"
+            class="p-0.5 px-3 m-1 rounded-md hover:bg-gray-100 focus:outline-none"
           >
             Login
           </g-link>
