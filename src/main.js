@@ -5,7 +5,7 @@ import Dashboard from '~/layouts/Dashboard'
 import Vuex from 'vuex'
 import Vuelidate from 'vuelidate'
 import { actions, getters, initiateState, mutations } from './store'
-import { menu, account } from './store/modules'
+import { menu } from './store/modules'
 
 export default function (Vue, { router, appOptions }) {
   Vue.use(Vuex)
@@ -13,13 +13,6 @@ export default function (Vue, { router, appOptions }) {
 
   Vue.component('Layout', DefaultLayout)
   Vue.component('Dashboard', Dashboard)
-
-  router.beforeEach((to, from, next) => {
-    if (/^\/dashboard/gm.test(to.path)) {
-      if (router.app.$store.state.user) next()
-      else next('/auth/login')
-    } else next()
-  })
 
   router.options.linkActiveClass = 'e4w'
   router.options.linkExactActiveClass = 'xr5t'
@@ -30,7 +23,6 @@ export default function (Vue, { router, appOptions }) {
     actions: actions,
     getters: getters,
     modules: {
-      account,
       menu
     }
   })
