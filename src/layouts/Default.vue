@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-gray-200 h-screen">
+  <main class="bg-gray-900 h-screen">
     <Header />
     <slot />
     <Footer />
