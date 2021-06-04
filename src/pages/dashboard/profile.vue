@@ -1,19 +1,35 @@
 <template>
   <Dashboard>
     <section class="text-gray-600 container p-6 mx-auto">
-      <div class="flex flex-wrap">
-        <div class="p-2 lg:w-1/2">
-          <div class="border-2 border-blue-500 px-6 py-8 rounded-lg">
-            <h2 class="tracking-widest font-medium text-gray-400 mb-4 text-center">USER INFO</h2>
-            <div>
-              Username : iamadmin
-              Status : Active
-            </div>
+      <div class="flex flex-wrap items-stretch">
+        <div class="flex-1 p-2 md:w-1/2">
+          <div class="h-full border-2 border-blue-500 px-6 py-8 rounded-lg">
+            <h2 class="tracking-widest font-medium text-blue-500 mb-4 text-center">USER INFO</h2>
+            <table class="table-auto w-full">
+              <tbody>
+                <tr>
+                  <td class="px-6 py-3 whitespace-nowrap text-gray-400">Username</td>
+                  <td>iamadmin</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-3 whitespace-nowrap text-gray-400">Status</td>
+                  <td>Active</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-3 whitespace-nowrap text-gray-400">Role</td>
+                  <td>user</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-3 whitespace-nowrap text-gray-400">HardwareId</td>
+                  <td>set</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-        <div class="p-2 lg:w-1/2">
-          <div class="border-2 border-blue-500 px-6 py-8 rounded-lg">
-            <h2 class="tracking-widest font-medium text-gray-400 mb-8 text-center">UPDATE PASSWORD</h2>
+        <div class="flex-1 p-2 md:w-1/2">
+          <div class="h-full border-2 border-blue-500 px-6 py-8 rounded-lg">
+            <h2 class="tracking-widest font-medium text-blue-500 mb-8 text-center">UPDATE PASSWORD</h2>
             <form novalidate>
               <div class="mb-4">
                 <div class="mb-2">
