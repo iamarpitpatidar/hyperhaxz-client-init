@@ -1,11 +1,11 @@
 <template>
   <div class="flex">
-    <aside class="flex flex-col w-64 h-screen px-3 py-8 bg-white border-r">
+    <aside class="h-screen top-0 sticky p-4 bg-gray-800 flex flex-col w-64 px-3 py-8 border-r border-gray-700">
       <logo />
       <nav-bar />
     </aside>
-    <main class="bg-gray-100 w-full">
-      <nav class="bg-white mx-auto px-6 shadow">
+    <main class="bg-gray-900 w-full">
+      <nav class="top-0 sticky bg-gray-800 mx-auto px-6 shadow">
         <div class="relative flex justify-end h-14">
           <div class="absolute inset-y-0 right-0 flex items-center pr-2">
             <menu class="ml-3 relative">
@@ -39,9 +39,7 @@
           </div>
         </div>
       </nav>
-      <div class="w-full h-full rounded">
-        <slot />
-      </div>
+      <slot />
     </main>
   </div>
 </template>

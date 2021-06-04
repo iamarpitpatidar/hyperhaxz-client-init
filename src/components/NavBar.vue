@@ -2,32 +2,32 @@
   <nav class="mt-6">
     <nav-link to="/dashboard/">
       <home-icon class="h-5 w-5" />
-      <span class="mx-4 font-medium">Home</span>
+      <span class="mx-4 font-medium text-blue-500">Home</span>
     </nav-link>
     <nav-link to="/dashboard/users/">
       <users-icon class="h-5 w-5" />
-      <span class="mx-4 font-medium">Users</span>
+      <span class="mx-4 font-medium text-blue-500">Users</span>
     </nav-link>
     <nav-link to="/dashboard/invites/">
       <invite-icon class="h-5 w-5" />
-      <span class="mx-4 font-medium">Invite Codes</span>
-    </nav-link>
-    <nav-link to="/dashboard/subscriptions/">
-      <subscription-icon class="h-5 w-5" />
-      <span class="mx-4 font-medium">Subscriptions</span>
+      <span class="mx-4 font-medium text-blue-500">Invite Codes</span>
     </nav-link>
     <nav-link to="/dashboard/fraud/">
       <fraud-icon class="h-5 w-5" />
-      <span class="mx-4 font-medium">Fraud</span>
+      <span class="mx-4 font-medium text-blue-500">Fraud</span>
     </nav-link>
     <nav-link to="/dashboard/sellers/">
       <sellers-icon class="h-5 w-5" />
-      <span class="mx-4 font-medium">Sellers</span>
+      <span class="mx-4 font-medium text-blue-500">Sellers</span>
     </nav-link>
-    <hr class="my-6 dark:border-gray-600">
-    <nav-link to="/users/profile/">
+    <hr class="my-6 border-t-2 border-blue-500">
+    <nav-link to="/dashboard/profile/">
       <profile-icon class="h-5 w-5" />
-      <span class="mx-4 font-medium">Profile</span>
+      <span class="mx-4 font-medium text-blue-500">Profile</span>
+    </nav-link>
+    <nav-link to="/dashboard/subscriptions/">
+      <subscription-icon class="h-5 w-5" />
+      <span class="mx-4 font-medium text-blue-500">Subscriptions</span>
     </nav-link>
   </nav>
 </template>
